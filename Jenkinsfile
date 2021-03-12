@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Update Kube Config'){
             steps {
-                withAWS(region:'us-east-1',credentials:'aws') {
+                withAWS(region:'ap-south-1',credentials:'aws') {
                     sh 'aws eks --region us-east-1 update-kubeconfig --name stage-cluster'                    
                 }
             }
